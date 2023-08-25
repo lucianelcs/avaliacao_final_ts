@@ -12,5 +12,5 @@ pip install -r requirements.txt
 ```bash
 pytest .
 ```
-## Python interpreter 
+## Python interpreter version
 3.11
