@@ -1,14 +1,13 @@
-import time
+
 import pytest
 
 from pages.CustomerLoginPage import CustomerLoginPage
 from pages.CustomerPage import CustomerPage
-from pages.DepositPage import DepositPage
+from pages.WithDrawlPage import WithDrawlPage
 
 
-class test_deposit_in_account:
-
-    def test_deposit_in_customer_account(self, setup):
+class test_withdrawl_in_account:
+    def test_withdrawl_in_customer_account(self, setup):
         menu_page = setup
         menu_page.open_customer_login_view()
         assert menu_page.is_main_url, "Página errada!"
@@ -17,12 +16,8 @@ class test_deposit_in_account:
         customer_login_page.select_customer()
         customer_login_page.click_on_login()
         customer_page = CustomerPage(driver=menu_page.driver)
-        customer_page.click_on_deposit_menu()
-        deposit_page = DepositPage(driver=menu_page.driver)
-        deposit_page.deposit_process()
-        deposit_page.click_on_deposit_button()
-        assert deposit_page.success_message, "Deposit Successful"
-
-
-
-
+        customer_page.click_on_withdrawl_menu()
+        withdrawl_page = WithDrawlPage(driver=menu_page.driver)
+        withdrawl_page.withdrawl_process()
+        withdrawl_page.click_on_withdrawl_button()
+        assert withdrawl_page.success_message, "Transaction successful"

@@ -6,7 +6,7 @@ from pages.MenuPage import MenuPage
 
 class DepositPage(PageObject):
     url = 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/account'
-    deposit_btn = '[ng-click="deposit()"]'
+    deposit_btn = 'ng-click="withdrawl()"'
     deposit_amount_field = '[ng-model="amount"]'
     save_deposit_btn = 'button[type="submit"]'
     success_message = '[ng-show="message"]'

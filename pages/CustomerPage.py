@@ -1,12 +1,12 @@
 from selenium.webdriver.common.by import By
 
 from pages.PageObject import PageObject
-from pages.MenuPage import MenuPage
 
 
 class CustomerPage(PageObject):
     url = 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/account'
     deposit_menu = '[ng-click="deposit()"]'
+    withdrawl_menu = '[ng-click="withdrawl()"]'
     your_name_dropdown_options = 'option[value="3"]'
     css_login_btn = 'button[type="submit"]'
 
@@ -19,3 +19,6 @@ class CustomerPage(PageObject):
 
     def click_on_deposit_menu(self):
         self.driver.find_element(By.CSS_SELECTOR, self.deposit_menu).click()
+
+    def click_on_withdrawl_menu(self):
+        self.driver.find_element(By.CSS_SELECTOR, self.withdrawl_menu).click()
