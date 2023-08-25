@@ -7,14 +7,10 @@ Projeto de Avaliação final da Disciplina Testes de Sistemas
 pip install -r requirements.txt
 ```
 
-## Unittest
-
-```bash
-python -m unittest -v
-```
-
 ## Pytest
 
 ```bash
 pytest .
 ```
+## Python interpreter 
+3.11
